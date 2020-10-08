@@ -14,10 +14,6 @@ int main() {
   struct S s = {1, 49};
   int *heap_allocated = (int *) malloc(sizeof(int));
 
-  //printf("%d\n \t", p);
-  //scanf("%d", &a);
-  //printf("%d\n", a);
-
   if (heap_allocated == NULL) {
     goto exit;
   }
