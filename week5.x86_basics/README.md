@@ -8,4 +8,5 @@ echo "DONE! debug your program with gdb and enjoy"
 ```
 
 Calling convention для x86 ассемблера:
+
 ![Calling convention](calling_conv_x86.jpeg)
