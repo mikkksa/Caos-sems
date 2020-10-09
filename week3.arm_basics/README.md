@@ -7,7 +7,7 @@ sudo apt install qemu-user
 
 ## Компиляция:
 ```
-/usr/local/bin/arm-gcc/bin/arm-linux-gnueabi-gcc -marm prog_name.S -o prog_name
+/usr/local/bin/arm-gcc/bin/arm-linux-gnueabi-gcc -marm prog_name.S prog_name2.c prog_name3... -o prog_name
 ```
 
 ## Запуск:

@@ -2,9 +2,11 @@
 #include <assert.h>
 #include <stdint.h>
 
+// ------------------ TASK ------------------ //
+// While !eof find value of quadratic equation in asm function //
+
 extern
 int f(int A, int B, int C, int x);
-
 
 int
 main()
