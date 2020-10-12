@@ -18,4 +18,6 @@ Calling convention для x86 ассемблера:
 ![Calling convention](calling_conv_x86.jpeg)
 
 ## Полезная информация:
-[Обо всем понемногу](https://en.wikibooks.org/wiki/X86_Assembly/GAS_Syntax)
+Обо всем понемногу
+[тут](https://en.wikibooks.org/wiki/X86_Assembly/GAS_Syntax)
+и [тут](https://en.wikibooks.org/wiki/X86_Assembly/X86_Architecture)
