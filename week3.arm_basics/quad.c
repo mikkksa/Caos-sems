@@ -5,6 +5,7 @@
 // ------------------ TASK ------------------ //
 // While !eof find value of quadratic equation in asm function //
 
+// This function must be written as point in assembly
 extern
 int f(int A, int B, int C, int x);
 
