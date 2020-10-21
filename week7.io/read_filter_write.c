@@ -12,6 +12,7 @@ main(int argc, char *argv[])
         exit_code = 1;
         goto finally;
     }
+    // TODO: move all declarations at the start
     int out_digits = open(argv[2], O_WRONLY | O_CREAT, 0640);
     int out_other = open(argv[3], O_WRONLY | O_CREAT, 0640);
     if (-1==out_digits || -1==out_other) {
