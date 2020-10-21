@@ -10,5 +10,8 @@ int main() {
         Item item;
         read(fd, &item, sizeof(item));
         // TODO: make offset
+
+        // Your code here
     }
+    // And here (and above :))
 }
