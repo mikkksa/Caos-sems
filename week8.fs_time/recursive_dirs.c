@@ -29,7 +29,15 @@ list_dir (const char * dir_name) {
 
 
         if (entry->d_type & DT_DIR) {
-            // Your code here
+            if (!strcmp(d_name, ".") || !strcmp(d_name, "..")) {
+                continue;
+            }
+            char path[256];
+            memset(path, '\0', 256);
+            strcat(path, dir_name);
+            strcat(path, "/");
+            strcat(path, d_name);
+            list_dir(path);
 	    }
     }
 
@@ -41,6 +49,6 @@ list_dir (const char * dir_name) {
 }
 
 int main () {
-    list_dir (".");
+    list_dir ("/");
     return 0;
 }

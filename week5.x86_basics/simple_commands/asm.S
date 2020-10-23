@@ -23,7 +23,7 @@ sum_struct:
 
         // %rdi - int64_t *
         // %rsi - elements count
-        // %rsi <= sum
+        // %rax <= sum
 sum_array:
         xor %rax, %rax
         xor %rbx, %rbx
