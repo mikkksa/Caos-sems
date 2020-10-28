@@ -21,6 +21,7 @@ _start:
         mov     rax, __NR_exit
         mov     rbx, 0
         syscall
+
         .data
 hello_world:
         .string "Hello, World!\n"
