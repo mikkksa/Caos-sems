@@ -10,28 +10,24 @@
 int main(int argc, char *argv[])
 {
     char *file_name = argv[1];
-    char *pattern = argv[2];
-    int fd = open(file_name, O_RDONLY);
+    int fd = open(file_name, O_RDWR);
     struct stat st;
     fstat(fd, &st);
     if (0==st.st_size) {
         close(fd);
         exit(0);
     }
+    lseek(fd, 4, SEEK_SET);
+    write(fd, "", 1);
     char *contents = mmap(NULL,
                           st.st_size,
-                          PROT_READ,
+                          PROT_READ | PROT_WRITE,
                           MAP_PRIVATE,
                           fd,
                           0);
-    char *entry = contents;    
-    while (NULL!=(entry=strstr(entry, pattern))) {
-        size_t diff = entry - contents;
-        printf("%lu ", diff);
-        entry++;
-    }
-    printf("\n");
+    char *str = "preceq";
+    memcpy(contents, str, 5);
+    msync(contents, 5, MS_SYNC);
     munmap(contents, st.st_size);
     close(fd);
-    exit(-1);
 }
