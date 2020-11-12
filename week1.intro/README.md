@@ -19,3 +19,7 @@ https://www.hostinger.com/tutorials/linux-commands
 скажет, где у Вас заложена логическая ошибка, поэтому думайте дважды
 перед тем, как сделать любую неочевидную операцию (например, каст - 
 `(int8_t)256` - undefined behaviour).
+
+## Screencast
+
+[Смотреть](https://youtu.be/PqNskRcR6yk)
