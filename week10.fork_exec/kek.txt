@@ -1,0 +1,3 @@
+Inter process communication (IPC)
+
+process1->data   ----->   process2->data
