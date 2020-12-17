@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
     int listenfd = 0, connfd = 0;
     struct sockaddr_in serv_addr;
 
-    char sendBuff[20] = "Hello\n";
+    char sendBuff[20] = "";
     time_t ticks;
 
     listenfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -28,9 +28,9 @@ int main(int argc, char *argv[]) {
 
     while(1) {
         connfd = accept(listenfd, (struct sockaddr*)NULL, NULL);
-                                                                                                                                                                              
-        read(connfd, sendBuff, strlen(sendBuff));
-	printf(sendBuff);
+                                                                                                              
+        printf("%d\n", read(connfd, sendBuff, strlen(sendBuff)));
+        printf("%s\n", sendBuff);
 
         close(connfd);
         sleep(1);
